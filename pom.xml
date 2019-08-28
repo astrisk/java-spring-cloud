@@ -86,6 +86,7 @@
     <version.io.opentracing.contrib-opentracing-spring-mongo>0.1.2</version.io.opentracing.contrib-opentracing-spring-mongo>
     <version.io.github.openfeign-feign-okhttp>10.2.0</version.io.github.openfeign-feign-okhttp>
     <version.io.github.openfeign.opentracing>0.3.0</version.io.github.openfeign.opentracing>
+    <version.io.opentracing-spring-cloud-gateway-starter>0.1.0</version.io.opentracing-spring-cloud-gateway-starter>
     <!-- spring-boot-starter-parent is a module of spring-boot-dependencies
         https://github.com/spring-projects/spring-boot/blob/master/spring-boot-starters/spring-boot-starter-parent/pom.xml -->
     <version.org.springframework.boot>2.1.5.RELEASE</version.org.springframework.boot>
@@ -174,6 +175,12 @@
         <artifactId>opentracing-spring-cloud-zuul-starter</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>opentracing-spring-cloud-gateway-starter</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
 
       <dependency>
         <groupId>io.opentracing</groupId>
@@ -345,7 +352,7 @@
               <consoleOutput>true</consoleOutput>
               <failsOnError>true</failsOnError>
               <failOnViolation>true</failOnViolation>
-              <linkXRef>false</linkXRef>
+<!--              <linkXRef>false</linkXRef>-->
               <includeTestSourceDirectory>true</includeTestSourceDirectory>
             </configuration>
             <goals>
